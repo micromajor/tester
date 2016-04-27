@@ -8,10 +8,16 @@ Meteor.setInterval(function(){
 			if (!/^http:\/\//.test(sites[i].url)) {
 				sites[i].url = "http://" + sites[i].url;
 	        }
+			try{
+				var resultUrl  = HTTP.call('GET', sites[i].url);
+				var status     = resultUrl.statusCode;
+				
+			}catch(e){
+				var status = e.response.headers.status;
+			}
 			
-			var resultUrl  = HTTP.call('GET', sites[i].url);
 			var targetSite = Websites.findOne({'name':'Capital'});
-			Websites.update({name:sites[i].name}, {$set: {status: resultUrl.statusCode}});
+			Websites.update({name:sites[i].name}, {$set: {status: status}});
 			
 		}
 	},

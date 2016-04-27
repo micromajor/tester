@@ -11,7 +11,7 @@ Template.body.onCreated(function bodyOnCreated() {
 
 Template.body.helpers({
 	sites(){
-		return Websites.find({}, { sort: { createdAt: -1 } })
+		return Websites.find({}, { sort: { status: -1 } })
 	},
 })
 
@@ -26,7 +26,7 @@ Template.body.events({
 		var siteUrl = event.target[1].value;
 		
 		
-		Websites.insert({name: siteName, url : siteUrl});
+		Websites.insert({name: siteName, url : siteUrl, status : 1000});
 		
 		event.target[0].value = '';
 		event.target[1].value = '';
