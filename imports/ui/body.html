@@ -1,0 +1,18 @@
+<body>
+<div class="container">
+    <div class="header">
+        <form class="form1">
+            <input type="text" name="siteName" placeholder="Libellé du site" />
+            <input type="text" name="siteUrle" placeholder="Url du site" />
+            <input type="submit" value="enter" />
+        </form>
+    </div>
+    <div class="content">
+        <ul>
+           {{#each sites}}
+               {{> site}}
+           {{/each}}
+        </ul>
+    </div>
+</div>
+</body>
