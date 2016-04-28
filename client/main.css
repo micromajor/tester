@@ -5,30 +5,45 @@ body{
 }
 
 .container{
-	width : 100%;
+	width : 60%;
 	height: 80px;
+	margin: 0 auto;
+}
+
+.template-sites,
+.template-videos{
+	width: 45%;
+	background-color : peru;
+	margin-right : 10px;
+	float : left;
 }
 
 .header{
 	background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
 	width: 100%;
-	padding-top : 25px;
-	padding-bottom : 25px;
+	padding-top : 5px;
+	padding-bottom : 5px;
+	min-height : 65px;
 }
 
 .form1{
 	margin: 0 auto;
-    width: 50%;	
+    width: 60%;	
 }
 
 .content{
-	width: 70%;
-	margin : 0 auto;
+	width: 100%;
 	background-color : #fff;
 }
 
 ul{
-	width : 350px;
+	width : 80%;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 20px;
+	
 }
 
 
@@ -38,7 +53,7 @@ ul{
 
 li{
 	list-style-type: none;
-    font-size: 30px;
+    font-size: 20px;
     display: block;
 }
 

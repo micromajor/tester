@@ -1,0 +1,22 @@
+<template name="sites">
+    <div class="template-sites">
+        <div class="header">
+            <form class="form1">
+                <input type="text" name="siteName" placeholder="Libellé du site" />
+                <input type="text" name="siteUrle" placeholder="Url du site" />
+                <input type="submit" value="enter" />
+            </form>
+        </div>
+        <div class="content">
+            <ul>
+               {{#each sites}}
+                <li>
+                    <span>{{name}}</span>
+                    <span class="status"><i TITLE="{{status}}" class="fa fa-circle status_{{status}}" aria-hidden="true"></i></span>
+                    <span class="delete" id="{{_id}}">&times;</span>
+                </li>
+               {{/each}}
+            </ul>
+        </div>
+    </div>
+</template>
