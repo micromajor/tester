@@ -3,6 +3,16 @@ import { Videos } from '../api/videos.js';
 
 import './videos.html';
 
+Template.videos.onCreated(function bodyOnCreated() {
+	this.status = new ReactiveDict();
+});
+
+Template.videos.helpers({
+	videos(){
+		return Videos.find({},{ sort: { name: 1 } });
+	}
+})
+
 Template.videos.events({
 	'submit .form2': function(event){
 		event.preventDefault();
@@ -13,11 +23,16 @@ Template.videos.events({
 		
 		var matchedVideo = Videos.findOne({token:token, 'tag':tag });
 		if (matchedVideo === undefined) {
-			Videos.insert({token:token, site:targetSite, tag:tag});
+			Videos.insert({token:token, site:targetSite, tag:tag, status: 'pending'});
 		}else {
-			Videos.update({_id : matchedVideo._id}, {$set :{token:token, site:targetSite, tag:tag}});
+			Videos.update({_id : matchedVideo._id}, {$set :{token:token, site:targetSite, tag:tag, status: 'pending'}});
 		}
 		
 		event.target[1].value = '';
+	},
+	'click .delete': function (event){
+		var elem = event.target.id;
+		
+		Videos.remove({_id : elem});
 	}
 })

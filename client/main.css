@@ -57,9 +57,10 @@ li{
     display: block;
 }
 
-.status_200{color : #0f0;}
+.status_200,.status_1{color : #0f0;}
 .status_403{color : #FFA500;}
 .status_404{color : #FFFF00;}
-.status_500{color : #f00;}
-.status_{color : #808080}
+.status_500,.status_0{color : #f00;}
+.status_, .status_pending{color : #808080}
+
 .delete{font-weight : bold;color : #880000; cursor:pointer;}

@@ -9,5 +9,16 @@
             <input type="submit" value="enter" />
         </form>
         </div>
+        <div class="content">
+            <ul>
+               {{#each videos}}
+                <li>
+                    <span>Vidéos {{site}} {{tag}}</span>
+                    <span class="status"><i TITLE="{{status}}" class="fa fa-circle status_{{status}}" aria-hidden="true"></i></span>
+                    <span class="delete" id="{{_id}}">&times;</span>
+                </li>
+               {{/each}}
+            </ul>
+        </div>
     </div>
 </template>

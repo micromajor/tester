@@ -3,9 +3,9 @@ import { Websites } from '../api/websites.js';
 
 import './sites.html';
 
-Template.sites.onCreated(function bodyOnCreated() {
-	this.status = new ReactiveDict();
-});
+//Template.sites.onCreated(function bodyOnCreated() {
+//	this.status = new ReactiveDict();
+//});
 
 Template.sites.helpers({
 	sites(){
