@@ -7,7 +7,7 @@ Meteor.setInterval(function(){
 	var videosRows = Videos.find({}, {fields: {}}).fetch();
 	for (var i=0; i < videosRows.length; i++) {
 		try{
-			var resultUrl       = HTTP.call('GET', 'http://api.brightcove.com/services/library?command=find_videos_by_tags&token=' + videosRows[i].token + '&and_tags=' + videosRows[i].tag + '&page_size=1&fields=name%2Cid%2CpublishedDate');
+			var resultUrl       = HTTP.call('GET', 'http://api.brightcove.com/services/library?command=find_videos_by_tags&token=' + videosRows[i].token + '&and_tags=' + videosRows[i].tag + '&page_size=1&fields=name%2Cid%2CpublishedDate&sort_by=PUBLISH_DATE');
 			var lastVideo       = resultUrl.content;
 			var jsonLastVideo   = EJSON.parse(lastVideo); 
 			var videoAttributes = jsonLastVideo.items[0];
