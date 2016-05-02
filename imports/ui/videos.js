@@ -37,11 +37,14 @@ Template.videos.events({
 		Videos.remove({_id : elem});
 	},
 	'mouseover .informations' : function (event){
+		
 		this.timer = setTimeout(function () {
-         alert('pwet');
+			
+         $('#' + event.currentTarget.parentNode.parentNode.children[5].id).slideToggle("slow");
 		}, 1000);
 	},
-	'mouseout' : function () {
+	'mouseout .informations' : function () {
 		clearTimeout(this.timer);
 	}
+	
 })

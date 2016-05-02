@@ -93,6 +93,12 @@ li {
     margin-left: 5px;
     animation: pivot90 1s linear forwards;
 }
+
+.informationsContainer{
+	display : none
+}
+
+
 @keyframes pivot90 { 100% {
 /* 	-webkit-transform: rotate(90deg); */
 	transform: rotate(90deg);
