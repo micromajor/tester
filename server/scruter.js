@@ -21,12 +21,13 @@ Meteor.setInterval(function(){
 				var resultUrl  = HTTP.call('GET', sites[i].url + '?' + antiCache);
 				var status     = resultUrl.statusCode;
 				
+				var generationTime = resultUrl;
+				console.log(generationTime.headers);
+				
 			}catch(e){
 				var status = e.response.headers.status;
 			}
-			
 			Websites.update({name:sites[i].name}, {$set: {status: status}});
-			
 		}
 	},
 10000

@@ -1,66 +1,100 @@
 /* CSS declarations go here */
-body{
+body {
 	background-image: linear-gradient(to bottom, #315481, #918e82 100%);
 	background-attachment: fixed;
 }
 
-.container{
-	width : 60%;
+.container {
+	width: 60%;
 	height: 80px;
 	margin: 0 auto;
 }
 
-.template-sites,
-.template-videos{
+.template-sites, .template-videos {
 	width: 45%;
-	background-color : peru;
-	margin-right : 10px;
-	float : left;
+	background-color: peru;
+	margin-right: 10px;
+	float: left;
 }
 
-.header{
+.header {
 	background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
 	width: 100%;
-	padding-top : 5px;
-	padding-bottom : 5px;
-	min-height : 65px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	min-height: 65px;
 }
 
-.form1{
+.form1 {
 	margin: 0 auto;
-    width: 60%;	
+	width: 60%;
 }
 
-.content{
+.content {
 	width: 100%;
-	background-color : #fff;
+	background-color: #fff;
 }
 
-ul{
-	width : 80%;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 20px;
-	
+ul {
+	width: 80%;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 20px;
 }
 
-
-.status{
-	float : right;
+.status {
+	float: right;
 }
 
-li{
+li {
 	list-style-type: none;
-    font-size: 20px;
-    display: block;
+	font-size: 20px;
+	display: block;
 }
 
-.status_200,.status_1{color : #0f0;}
-.status_403{color : #FFA500;}
-.status_404{color : #FFFF00;}
-.status_500,.status_0{color : #f00;}
-.status_, .status_pending{color : #808080}
+.status_200, .status_1 {
+	color: #0f0;
+}
 
-.delete{font-weight : bold;color : #880000; cursor:pointer;}
+.status_403 {
+	color: #FFA500;
+}
+
+.status_404 {
+	color: #FFFF00;
+}
+
+.status_500, .status_0 {
+	color: #f00;
+}
+
+.status_, .status_pending {
+	color: #808080
+}
+
+.delete {
+	font-weight: bold;
+	color: #880000;
+	cursor: pointer;
+}
+
+.informations {
+	float: right;
+	color: #98C7FF;
+	margin-left: 5px;
+}
+
+
+.informations:hover{
+	float: right;
+    color: #98C7FF;
+    margin-left: 5px;
+    animation: pivot90 1s linear forwards;
+}
+@keyframes pivot90 { 100% {
+/* 	-webkit-transform: rotate(90deg); */
+	transform: rotate(90deg);
+}
+}

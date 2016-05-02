@@ -26,9 +26,6 @@ Meteor.setInterval(function(){
 },
 20000);
 	
-	
-	
-	
 function checkVideoImportIsON(videosRows){
 	var ts          = Date.now() ;
 	var tsYesterday = ts - 86400000;

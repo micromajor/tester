@@ -5,6 +5,7 @@ import './videos.html';
 
 Template.videos.onCreated(function bodyOnCreated() {
 	this.status = new ReactiveDict();
+	this.timer = '';
 });
 
 Template.videos.helpers({
@@ -34,5 +35,13 @@ Template.videos.events({
 		var elem = event.target.id;
 		
 		Videos.remove({_id : elem});
+	},
+	'mouseover .informations' : function (event){
+		this.timer = setTimeout(function () {
+         alert('pwet');
+		}, 1000);
+	},
+	'mouseout' : function () {
+		clearTimeout(this.timer);
 	}
 })
