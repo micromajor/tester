@@ -36,22 +36,29 @@ body {
 }
 
 ul {
-	width: 80%;
+	width: 100%;
 	-webkit-margin-before: 0;
 	-webkit-margin-after: 0;
-	-webkit-margin-start: 0px;
-	-webkit-margin-end: 0px;
-	-webkit-padding-start: 20px;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-padding-start: 0;
 }
 
 .status {
-	float: right;
+	position : absolute;
+	right : 45px;
+}
+
+.infos {
+    position : absolute;
+    right : 25px;
 }
 
 li {
 	list-style-type: none;
 	font-size: 20px;
 	display: block;
+	position : relative;
 }
 
 .status_200, .status_1 {
@@ -95,7 +102,32 @@ li {
 }
 
 .informationsContainer{
-	display : none
+	display : none;
+	background-color: #98C7FF;
+    border: 3px #fff solid;
+    padding: 1px;
+    font-size: 13px;
+    height: auto;
+    float: left;
+    width: 100%;
+}
+
+.videoname{
+	display : block;
+	width : 70%;
+	border-right : 1px solid #fff;
+	padding-right : 5px;
+	padding-left : 5px;
+	float : left;
+}
+
+.videodate{
+    display : block;
+    width : 20%;
+    padding-right : 5px;
+    padding-left : 5px;
+    float : left;
+    
 }
 
 

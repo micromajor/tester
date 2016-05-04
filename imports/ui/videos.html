@@ -15,10 +15,13 @@
                 <li>
                     <span>Vidéos {{site}} {{tag}}</span>
                     <span class="delete" id="{{_id}}">&times;</span>
-                    <span><i class="informations fa fa-arrow-circle-right" aria-hidden="true"></i></span>
+                    <span class="infos"><i class="informations fa fa-arrow-circle-right" aria-hidden="true"></i></span>
                     <span class="status"><i TITLE="{{status}}" class="fa fa-circle status_{{status}}" aria-hidden="true"></i></span>
                     <div class="clearboth"></div>
-                    <div class="informationsContainer" id="infoContianer_{{_id}}">Helloworld</div>
+                    <div class="informationsContainer" id="infoContianer_{{_id}}">
+                        <span class="videoname">{{video_name}}</span>
+                        <span class="videodate">{{video_date}}</span>
+                    </div>
                 </li>
                {{/each}}
             </ul>
