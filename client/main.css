@@ -109,13 +109,13 @@ li {
     font-size: 13px;
     height: auto;
     float: left;
-    width: 100%;
+    width: 98%;
 }
 
 .videoname{
 	display : block;
 	width : 70%;
-	border-right : 1px solid #fff;
+	border-right : 2px solid #fff;
 	padding-right : 5px;
 	padding-left : 5px;
 	float : left;
@@ -125,7 +125,7 @@ li {
     display : block;
     width : 20%;
     padding-right : 5px;
-    padding-left : 5px;
+    padding-left : 18px;
     float : left;
     
 }
